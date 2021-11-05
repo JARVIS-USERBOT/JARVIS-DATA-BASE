@@ -8,12 +8,12 @@ from userbot.Config import Config
 from var import Var
 BOTLOG = True
 StartTime = time.time()
-PYTHONversion = "𝚅9.0.8"
-botversion = "𝚅9.0.8"
+JARVISversion = "𝚅1.0"
+botversion = "𝚅1.0"
 
 os.system("pip install --upgrade pip")
-if Var.PYTHON_STRING:
-    session_name = str(Var.PYTHON_STRING)
+if Var.JARVIS_STRING:
+    session_name = str(Var.JARVIS_STRING)
     bot = TelegramClient(StringSession(session_name), Var.APP_ID, Var.API_HASH)
 else:
     session_name = "startup"
