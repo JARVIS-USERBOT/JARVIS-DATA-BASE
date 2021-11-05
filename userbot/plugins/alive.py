@@ -5,8 +5,8 @@ from telethon.errors import ChatSendInlineForbiddenError as noin
 from telethon.errors.rpcerrorlist import BotMethodInvalidError as dedbot
 from userbot.Config import Config
 from telethon import version
-from userbot import ALIVE_NAME, StartTime, PYTHONversion
-from PYTHONBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
+from userbot import ALIVE_NAME, StartTime, JARVISversion
+from JARVISBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 from . import *
 async def reply_id(event):
@@ -18,14 +18,14 @@ async def reply_id(event):
     return reply_to_id
 
 
-DEFAULTUSER = ALIVE_NAME or "✞t͛ẞ̸ Pythonẞø✞ 🇮🇳"
+DEFAULTUSER = ALIVE_NAME or "JARVIS-BOT"
 PYTHON_IMG = Config.ALIVE_PIC
-CUSTOM_ALIVE_TEXT = Config.ALIVE_MSG or "ℓєgєи∂ Choice Pythonẞø✞"
-CUSTOM_YOUR_GROUP =Config.YOUR_GROUP or "@Python_Userbot_Support"
+CUSTOM_ALIVE_TEXT = Config.ALIVE_MSG or "JARVIS HERE"
+CUSTOM_YOUR_GROUP =Config.YOUR_GROUP or "@Jarvis_Support_Official"
 
-Python = bot.uid
+me = bot.uid
 
-mention = f"[{DEFAULTUSER}](tg://user?id={Python})"
+mention = f"[{DEFAULTUSER}](tg://user?id={me})"
 
 
 def get_readable_time(seconds: int) -> str:
@@ -59,7 +59,7 @@ def get_readable_time(seconds: int) -> str:
 uptime = get_readable_time((time.time() - StartTime))
 
 
-@bot.on(admin_cmd(outgoing=True, pattern="pyalive$"))
+@bot.on(admin_cmd(outgoing=True, pattern="up$"))
 @bot.on(sudo_cmd(pattern="pyalive$", allow_sudo=True))
 async def amireallyalive(alive):
     if alive.fwd_from:
