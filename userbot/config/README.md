@@ -1,1 +1,1 @@
-#ULTRA REAL STICK PYTHONBOT
+#safe config for jarvis-usertbot
