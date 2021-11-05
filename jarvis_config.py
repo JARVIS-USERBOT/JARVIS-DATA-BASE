@@ -22,7 +22,7 @@ if ENV:
         # This is required for the hash to torrent file functionality to work.
         HASH_TO_TORRENT_API = os.environ.get("HASH_TO_TORRENT_API", "https://example.com/torrent/{}");
         # This is required for the @telegraph functionality.
-        TELEGRAPH_SHORT_NAME = os.environ.get("TELEGRAPH_SHORT_NAME", "PYTHONBOT")
+        TELEGRAPH_SHORT_NAME = os.environ.get("TELEGRAPH_SHORT_NAME", "JARVIS-BOT")
         # Get a Free API Key from OCR.Space
         OCR_SPACE_API_KEY = os.environ.get("OCR_SPACE_API_KEY", None)
         # Send .get_id in any group with all your administration bots (added)
@@ -142,7 +142,7 @@ if ENV:
         MONGO_URI = os.environ.get("MONGO_URI", None)
         #alive
         ALIVE_PIC = os.environ.get("ALIVE_PIC", None)
-        AWAKE_PIC = os.environ.get("AWAKE_PIC", https://telegra.ph/file/310e8f7a06460d88dda55.jpg)
+        AWAKE_PIC = os.environ.get("AWAKE_PIC", "https://te.legra.ph/file/7aa60202b95b798a2a4bb.jpg")
         ALIVE_MSG = os.environ.get("ALIVE_MSG", None)
         YOUR_GROUP = os.environ.get("YOUR_GROUP", None)
         BOT_PIC = os.environ.get("BOT_PIC", None)
@@ -152,16 +152,16 @@ if ENV:
         LYDIA_API = os.environ.get("LYDIA_API",None)
         PLUGIN_CHANNEL = os.environ.get("PLUGIN_CHANNEL", None)
         UPSTREAM_REPO = os.environ.get(
-            "UPSTREAM_REPO", "https://github.com/LEGEND-LX/PYTHONBOT-V9.0.8"
+            "UPSTREAM_REPO", "https://github.com/JARVIS-USERBOT/JARVIS-DATA-BASE"
         )
-        PYTHON_STRING = os.environ.get("PYTHON_STRING", None)
+        JARVIS_STRING = os.environ.get("JARVIS_STRING", None)
         BOT_MODE = os.environ.get("BOT_MODE", "ON")
         BOT_TRIGGER = os.environ.get("BOT_TRIGGER", "^/")
         BOTMODE_LOG = int(os.environ.get("BOTMODE_LOG", False))
         FORCE_SUB = os.environ.get("FORCE_SUB", None)
         FORCE_CHANNEL_UN = os.environ.get("FORCE_CHANNEL_UN", None)
         FORCE_CHANNEL_ID = int(os.environ.get("FORCE_CHANNEL_ID", False))
-        EXTRA_PYTHONBOT = os.environ.get("EXTRA_PYTHONBOT-V9.0.8", -1001221881562)
+        EXTRA_JARVISBOT = os.environ.get("EXTRA_JARVISBOT-1.0", -1001221881562)
         PM_DATA = os.environ.get("PM_DATA", "ENABLE")
 
 else:
