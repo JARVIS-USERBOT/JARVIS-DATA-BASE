@@ -101,7 +101,7 @@ async def assistant():
     else:
         print("Addons Not Loading")
 """
-bot.loop.run_until_complete(module())
+bot.loop.run_until_complete(main_pl())
 
 print(f"""|JARVIS-BOT TURNED ON
 |_____________""")
