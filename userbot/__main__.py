@@ -113,7 +113,7 @@ async def jarvis_is_on():
         if Config.LOGGER_ID != 0:
             await bot.send_file(
                 Config.LOGGER_ID,
-                PYTHON_PIC,
+                JARVIS_PIC,
                 caption=f"DEPLOYED JARVIS BOT",
             )
     except Exception as e:
