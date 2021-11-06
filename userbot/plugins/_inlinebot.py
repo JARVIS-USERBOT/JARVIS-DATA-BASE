@@ -8,7 +8,7 @@ import sys
 from telethon.events import InlineQuery, callbackquery
 from userbot import *
 from userbot.cmdhelp import *
-from PYTHONBOT.utils import *
+from JARVISBOT.utils import *
 import telethon.tl.functions
 from userbot.Config import Config
 from userbot import ALIVE_NAME
@@ -20,13 +20,13 @@ from telethon.errors.rpcerrorlist import UserNotParticipantError
 from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.functions.channels import JoinChannelRequest
 from telethon.tl.functions.messages import ExportChatInviteRequest
-DEFAULTUSER = ALIVE_NAME or "PYTHON"
+DEFAULTUSER = ALIVE_NAME or "Tony stark"
 from . import * 
-python_row = Config.BUTTONS_IN_HELP
-python_emoji1 = Config.EMOJI_IN_HELP1
-python_emoji2 = Config.EMOJI_IN_HELP2
+jarvis_row = Config.BUTTONS_IN_HELP
+jarvis_emoji1 = Config.EMOJI_IN_HELP1
+jarvis_emoji2 = Config.EMOJI_IN_HELP2
 alive_emoji = Config.ALIVE_EMOJI
-python_pic = Config.PM_PIC or ""
+jarvis_pic = Config.PM_PIC or ""
 cstm_pmp = Config.PM_MSG
 ALV_PIC = Config.ALIVE_PIC
 help_pic = Config.HELP_PIC or "https://telegra.ph/file/00399ad38373f61c5a2ff.jpg"
@@ -48,7 +48,7 @@ mssge = (
 
 USER_BOT_WARN_ZERO = "Enough Of Your Flooding In My Master's PM!! \n\n**🚫 Blocked and Reported**"
 
-PYTHON_FIRST = (
+JARVIS_FIRST = (
     "𝙷𝚎𝚕𝚕𝚘 𝚂𝚒𝚛/𝙼𝚒𝚜𝚜,\n𝙸 𝚑𝚊𝚟𝚎𝚗'𝚝 𝚊𝚙𝚙𝚛𝚘𝚟𝚎𝚍 𝚢𝚘𝚞 𝚢𝚎𝚝 𝚝𝚘 𝚙𝚎𝚛𝚜𝚘𝚗𝚊𝚕 𝚖𝚎𝚜𝚜𝚊𝚐𝚎 𝚖𝚎😎⚠️.\n"
     "𝐓𝐡𝐢𝐬 𝐈𝐬 𝐌𝐲 𝐎𝐰𝐧𝐞𝐫 {}\n\n"
     "**{}**\n\nPlease Choose Why u Are Here♥️!!"
@@ -79,7 +79,7 @@ def button(page, modules):
     for pairs in pairs[page]:
         buttons.append(
             [
-                custom.Button.inline(f"{python_emoji1} " + pair + f" {python_emoji2}", data=f"Information[{page}]({pair})")
+                custom.Button.inline(f"{jarvis_emoji1} " + pair + f" {jarvis_emoji2}", data=f"Information[{page}]({pair})")
                 for pair in pairs
             ]
         )
@@ -90,7 +90,7 @@ def button(page, modules):
                f"⭅ϐαϲκ{alive_emoji}", data=f"page({(max_pages - 1) if page == 0 else (page - 1)})"
             ),
             custom.Button.inline(
-               f"{python_emoji2} ❌ {python_emoji1}", data="close"
+               f"{jarvis_emoji2} ❌ {jarvis_emoji1}", data="close"
             ),
             custom.Button.inline(
                f"{alive_emoji}ղҽxԵ⭆", data=f"page({0 if page == (max_pages - 1) else page + 1})"
@@ -107,7 +107,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         builder = event.builder
         result = None
         query = event.text
-        if event.query.user_id == bot.uid and query == "Pythonbot_help":
+        if event.query.user_id == bot.uid and query == "jarvis_help":
             rev_text = query[::-1]
             veriler = button(0, sorted(CMD_HELP))
             apn = []
