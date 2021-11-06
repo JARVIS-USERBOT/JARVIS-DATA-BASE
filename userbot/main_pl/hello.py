@@ -1,5 +1,6 @@
 import random
 from JARVIS.utlis import admin_command,sudo_command,edit_or_reply
+from . import *
 
 hello_message = ["Hello","Hi","Hello there","I am here , hello!","Hey"]
 hello_message_random = random.choice(hello_message)
