@@ -112,8 +112,8 @@ botname = Config.BOT_USERNAME
 @bot.on(admin_cmd(pattern="alive$", allow_sudo=True))
 async def jarvis_a(event):
     try:
-        python = await bot.inline_query(botname, "alive")
-        await python[0].click(event.chat_id)
+        jarvis = await bot.inline_query(botname, "alive")
+        await jarvis[0].click(event.chat_id)
             except (noin, dedbot):
         await eor(event, msg)
 
