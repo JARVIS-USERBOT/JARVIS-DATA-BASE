@@ -15,7 +15,7 @@ from telethon.tl.types import DocumentAttributeVideo
 from telethon import events
 from userbot import CMD_HELP
 from userbot.Config import Config
-from PYTHONBOT.utils import admin_cmd, progress
+from JARVISBOT.utils import admin_cmd, progress
 from userbot.cmdhelp import CmdHelp
 
 thumb_image_path = Config.TMP_DOWNLOAD_DIRECTORY + "/thumb_image.jpg"
