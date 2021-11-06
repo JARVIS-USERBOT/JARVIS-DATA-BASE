@@ -6,7 +6,7 @@ from . import *
 import asyncio
 
 from userbot import ALIVE_NAME, CMD_HELP
-from PYTHONBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
+from JARVISBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 
 
