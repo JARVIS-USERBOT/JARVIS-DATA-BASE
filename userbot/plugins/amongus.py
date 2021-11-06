@@ -5,7 +5,7 @@ import asyncio
 from userbot.cmdhelp import CmdHelp
 
 from userbot import *
-from PYTHONBOT.utils import *
+from JARVISBOT.utils import *
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "PYTHON User"
 
