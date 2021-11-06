@@ -57,6 +57,17 @@ async def module():
       path1 = Path(f.name)
       shortname = path1.stem
       load_module(shortname.replace(".py", ""))
+
+async def main_pl():
+  import glob
+  path = 'userbot/main_pl/*.py'
+  files = glob.glob(path)
+  for name in files:
+    with open(name) as f:
+      path1 = Path(f.name)
+      shortname = path1.stem
+      load_module(shortname.replace(".py", ""))
+
 """
 async def assistant():
     path = "userbot/plugins/assistant/*.py"
