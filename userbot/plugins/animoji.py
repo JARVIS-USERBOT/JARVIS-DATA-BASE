@@ -2,7 +2,7 @@ import asyncio
 from collections import deque
 
 from userbot import CMD_HELP
-from PYTHONBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
+from JARVISBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 
 from .import *
