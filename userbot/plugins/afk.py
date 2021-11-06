@@ -8,7 +8,7 @@ from telethon import events
 from telethon.tl import functions, types
 from userbot import CMD_HELP
 from userbot import ALIVE_NAME, PYTHONversion
-from PYTHONBOT.utils import admin_cmd, edit_or_reply
+from JARVISBOT.utils import admin_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "ℓєgєи∂"
