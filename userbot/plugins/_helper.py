@@ -6,9 +6,9 @@ from telethon.errors.rpcerrorlist import BotMethodInvalidError as dedbot, BotInl
 from userbot.Config import Config
 from . import *
 from userbot import ALIVE_NAME, CMD_LIST, SUDO_LIST
-from PYTHONBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
+from JARVISBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 
-perf = "[ Pythonẞø† ]"
+perf = "[ JARVIS BOT ]"
 
 mybot = Config.BOT_USERNAME
 if mybot.startswith("@"):
