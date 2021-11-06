@@ -19,7 +19,7 @@ async def reply_id(event):
 
 
 DEFAULTUSER = ALIVE_NAME or "JARVIS-BOT"
-PYTHON_IMG = Config.ALIVE_PIC
+JARVIS_IMG = Config.ALIVE_PIC
 CUSTOM_ALIVE_TEXT = Config.ALIVE_MSG or "JARVIS HERE"
 CUSTOM_YOUR_GROUP =Config.YOUR_GROUP or "@Jarvis_Support_Official"
 
@@ -85,7 +85,7 @@ async def amireallyalive(alive):
         PYTHON_caption += f"║┣⪼Ⲃⲟⲧ Ⳳⲉʀⲋⲓⲟⲛ  ┣⪼  {mention}\n"
         PYTHON_caption += f"║┣⪼Ⳙⲣⲧⲓⲙⲉ       ┣⪼  {uptime}\n"
         PYTHON_caption += f"║┣⪼Ⲃⲟⲧ Ⲣⲓⲛⳋ     ┣⪼   290.087 \n"   
-        PYTHON_caption += f"║┣⪼Ⲣⲩⲧⲏⲟⲛ       ┣⪼  {PYTHONversion}\n"
+        PYTHON_caption += f"║┣⪼Ⲣⲩⲧⲏⲟⲛ       ┣⪼  {JARVISversion}\n"
         PYTHON_caption += f"║┣⪼Os:          ┣⪼  [Kali GNU/Linux](https://pkg.kali.org/derivative/kali-roll/) \n"   
         PYTHON_caption += f"║┣⪼Ⲧⲉⳑⲉⲧⲏⲟⲛ      ┣⪼  {version.__version__}\n" 
         PYTHON_caption += f"║┣⪼[✨🐍PYTHON┣⪼ 𝐔𝐬𝐞𝐫𝐛𝐨𝐭🐍✨](https://t.me/Python_Userbot_Support)\n"
@@ -93,7 +93,7 @@ async def amireallyalive(alive):
         PYTHON_caption += f"╚══════════════════❍⊱❁۪۪\n"
 
         await alive.client.send_file(
-            alive.chat_id, PYTHON_IMG, caption=PYTHON_caption, reply_to=reply_to_id
+            alive.chat_id, JARVIS_IMG, caption=PYTHON_caption, reply_to=reply_to_id
         )
         await alive.delete()
     else:
@@ -115,7 +115,7 @@ msg = f"""
 {Config.ALIVE_MSG}
     ♥️ ẞø✞ ẞ✞α✞µѕ ♥️
 **•⚜️•Øաղ̃ҽ̈r     : {mention}
-•🌹•𝖑𝖊ɠêɳ̃dẞø✞ : {PYTHONversion}
+•🌹•𝖑𝖊ɠêɳ̃dẞø✞ : {JARVISversion}
 •🌹•✞ҽ̀lҽ́ƭhøղ  : {version.__version__}
 •🌹•Ãbûßê     :  {abuse_m}
 •🌹•ßudø      :  {is_sudo}
