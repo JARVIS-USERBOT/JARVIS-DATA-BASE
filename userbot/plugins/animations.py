@@ -3,10 +3,10 @@ import asyncio
 from telethon.tl.functions.users import GetFullUserRequest
 
 from userbot import *
-from PYTHONBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
+from JARVISBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "ν2.ο"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "ν1.ο"
 @bot.on(admin_cmd(pattern="think$"))
 @bot.on(sudo_cmd(pattern="think$", allow_sudo=True))
 async def _(event):
