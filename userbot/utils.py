@@ -142,7 +142,7 @@ def load_module(shortname):
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         mod.bot = bot
-        #mod.PYTHON = PYTHON
+        #mod.JARVIS = JARVIS
         mod.tgbot = bot.tgbot
         mod.Var = Var
         mod.command = command
@@ -153,20 +153,20 @@ def load_module(shortname):
         mod.borg = bot
         mod.PYTHONBOT = bot
         mod.edit_or_reply = edit_or_reply
-        mod.delete_PYTHON = delete_PYTHON
-        mod.eod = delete_PYTHON
+        mod.delete_JARVIS = delete_JARVIS
+        mod.eod = delete_JARVIS
         mod.admin_cmd = admin_cmd
         mod.legend_cmd = admin_cmd
         mod.sudo_cmd = sudo_cmd
-        # support for PYTHONBOT originals
-        sys.modules["PYTHONBOT.utils"] = userbot.utils
-        sys.modules["PYTHONBOT"] = userbot
+        # support for JARVISBOT originals
+        sys.modules["JARVISBOT.utils"] = userbot.utils
+        sys.modules["JARVISBOT"] = userbot
         # support for paperplaneextended
         sys.modules["userbot.events"] = userbot.utils
         spec.loader.exec_module(mod)
         # for imports
         sys.modules["userbot.plugins." + shortname] = mod
-        LOGS.info("🔥⚡PYTHON-BOT⚡🔥 ~ " + shortname)
+        LOGS.info("⚡JARVIS-BOT⚡ ~ " + shortname)
 
 
    
@@ -178,23 +178,23 @@ def load_addons(shortname):
         import sys
         import importlib
         from pathlib import Path
-        path = Path(f"PYTHONUSERBOT/{shortname}.py")
-        name = "PYTHONUSERBOT.{}".format(shortname)
+        path = Path(f"JARVIS-DATA-BASE/{shortname}.py")
+        name = "JARVIS-DATA-BASE.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
-        LOGS.info("PYTHONUSERBOT ~ " + shortname)
+        LOGS.info("JARVIS-DATA-BASE ~ " + shortname)
     else:
         import userbot.utils
         import sys
         import importlib
         from pathlib import Path
-        path = Path(f"PYTHONUSERBOT/{shortname}.py")
-        name = "PYTHONUSERBOT.{}".format(shortname)
+        path = Path(f"JARVIS-DATA-BASE/{shortname}.py")
+        name = "JARVIS-DATA-BASE.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         mod.bot = bot
-        #mod.PYTHON = PYTHON
+        #mod.JARVIS = JARVIS
         mod.tgbot = bot.tgbot
         mod.Var = Var
         mod.command = command
@@ -203,21 +203,21 @@ def load_addons(shortname):
         sys.modules["uniborg.util"] = userbot.utils
         mod.Config = Config
         mod.borg = bot
-        mod.PYTHONBOT = bot
+        mod.JARVISBOT = bot
         mod.edit_or_reply = edit_or_reply
-        mod.delete_PYTHON = delete_PYTHON
-        mod.eod = delete_PYTHON
+        mod.delete_JARVIS = delete_JARVIS
+        mod.eod = delete_JARVIS
         mod.admin_cmd = admin_cmd
         mod.sudo_cmd = sudo_cmd
-        # support for PYTHONBOT originals
-        sys.modules["PYTHONBOT.utils"] = userbot.utils
+        # support for JARVISBOT originals
+        sys.modules["JARVISBOT.utils"] = userbot.utils
         sys.modules["userbot"] = userbot
         # support for paperplaneextended
         sys.modules["userbot.events"] = userbot.utils
         spec.loader.exec_module(mod)
         # for imports
-        sys.modules["PYTHONUSERBOT." + shortname] = mod
-        LOGS.info("🔱PYTHONUSERBOT🔱 ~ " + shortname)
+        sys.modules["JARVIS-DATA-BASE." + shortname] = mod
+        LOGS.info("🔱JARVIS-DATA-BASE🔱 ~ " + shortname)
 
 
 
@@ -326,12 +326,12 @@ def sudo_cmd(pattern=None, command=None, **args):
                 SUDO_LIST.update({file_test: [cmd]})
         else:
             if len(Config.SUDO_COMMAND_HAND_LER) == 2:
-                PYTHONreg = "^" + Config.SUDO_COMMAND_HAND_LER
+                JARVISreg = "^" + Config.SUDO_COMMAND_HAND_LER
                 reg = Config.SUDO_COMMAND_HAND_LER[1]
             elif len(Config.SUDO_COMMAND_HAND_LER) == 1:
-                PYTHONreg = "^\\" + Config.SUDO_COMMAND_HAND_LER
+                JARVISreg = "^\\" + Config.SUDO_COMMAND_HAND_LER
                 reg = Config.COMMAND_HAND_LER
-            args["pattern"] = re.compile(PYTHONreg + pattern)
+            args["pattern"] = re.compile(JARVISreg + pattern)
             if command is not None:
                 cmd = reg + command
             else:
@@ -431,13 +431,13 @@ async def edit_or_reply(
     os.remove(file_name)
 
 
-async def delete_PYTHON(event, text, time=None, parse_mode=None, link_preview=None):
+async def delete_JARVIS(event, text, time=None, parse_mode=None, link_preview=None):
     parse_mode = parse_mode or "md"
     link_preview = link_preview or False
     time = time or 5
     if event.sender_id in Config.SUDO_USERS:
         reply_to = await event.get_reply_message()
-        PYTHONevent = (
+        JARVISevent = (
             await reply_to.reply(text, link_preview=link_preview, parse_mode=parse_mode)
             if reply_to
             else await event.reply(
@@ -445,11 +445,11 @@ async def delete_PYTHON(event, text, time=None, parse_mode=None, link_preview=No
             )
         )
     else:
-        PYTHONevent = await event.edit(
+        JARVISevent = await event.edit(
             text, link_preview=link_preview, parse_mode=parse_mode
         )
     await asyncio.sleep(time)
-    return await PYTHONevent.delete()
+    return await JARVISevent.delete()
 
 # from paperplaneextended
 on = bot.on
@@ -520,7 +520,7 @@ async def eor(
     await event.delete()
     os.remove(file_name)
 
-async def delete_PYTHON(event, text, time=None, parse_mode=None, link_preview=None):
+async def delete_JARVIS(event, text, time=None, parse_mode=None, link_preview=None):
     parse_mode = parse_mode or "md"
     link_preview = link_preview or False
     time = time or 5
@@ -534,11 +534,11 @@ async def delete_PYTHON(event, text, time=None, parse_mode=None, link_preview=No
             )
         )
     else:
-        PYTHONevent = await event.edit(
+        JARVISevent = await event.edit(
             text, link_preview=link_preview, parse_mode=parse_mode
         )
     await asyncio.sleep(time)
-    return await PYTHONevent.delete()
+    return await JARVISevent.delete()
 
 # from paperplaneextended
 on = bot.on
@@ -866,5 +866,5 @@ def start_assistant(shortname):
         mod.tgbot = bot.tgbot
         spec.loader.exec_module(mod)
         sys.modules["userbot.plugins.assistant" + shortname] = mod
-        print("[🤴Assistant🤴 2.1] ~ HAS ~ 💞Installed💞 ~" + shortname)  
+        print("[🤴Assistant🤴 1.0] ~ HAS ~ 💞Installed💞 ~" + shortname)  
 
