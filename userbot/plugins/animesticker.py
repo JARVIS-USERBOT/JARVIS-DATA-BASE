@@ -4,7 +4,7 @@ import re
 
 from userbot.cmdhelp import CmdHelp
 from userbot.events import register
-from PYTHONBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
+from JARVISBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 
 EMOJI_PATTERN = re.compile(
     "["
