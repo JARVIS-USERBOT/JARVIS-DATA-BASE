@@ -2,7 +2,7 @@ from . import *
 import asyncio
 import random
 from telethon import events
-from PYTHONBOT.utils import admin_cmd
+from JARVISBOT.utils import admin_cmd
 from userbot.cmdhelp import CmdHelp
 from userbot import ALIVE_NAME
 from telethon.tl.types import ChannelParticipantsAdmins
