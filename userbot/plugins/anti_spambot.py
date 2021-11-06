@@ -1,5 +1,5 @@
 
-#PYTHONBOT
+#JARVISBOT
 from asyncio import sleep
 
 from requests import get
