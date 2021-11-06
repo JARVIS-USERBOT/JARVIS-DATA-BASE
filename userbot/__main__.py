@@ -47,7 +47,7 @@ else:
         bot.start()
 print("Loading Modules / Plugins")
 
-
+"""
 async def module():
   import glob
   path = 'userbot/plugins/*.py'
@@ -57,7 +57,7 @@ async def module():
       path1 = Path(f.name)
       shortname = path1.stem
       load_module(shortname.replace(".py", ""))
-
+"""
 async def main_pl():
   import glob
   path = 'userbot/main_pl/*.py'
