@@ -5,17 +5,17 @@ from userbot.cmdhelp import CmdHelp
 import datetime
 from telethon import version
 from . import *
-PYTHON_USER = bot.me.first_name
-Legendl_Mr_Hacker = bot.uid
-python_mention = f"[{PYTHON_USER}](tg://user?id={Legendl_Mr_Hacker})"
-PYTHON_logo = "./userbot/resources/pics/-6163428037589314866_121.jpg"
-PYTHON_logo1 = "./userbot/resources/pics/-4965507108355287505_121.jpg"
-PYTHON_logo2 = "./userbot/resources/pics/-4965507108355287505_121.jpg"
-PYTHON_logo4 = "./userbot/resources/pics/-4965507108355287505_121.jpg"
-PYTHON_logo3 = "./userbot/resources/pics/-4965507108355287505_121.jpg"
-PYTHONversion = "𝚅9.𝙾.8"
+JARVIS_USER = bot.me.first_name
+ok = bot.uid
+python_mention = f"[{JARVIS_USER}](tg://user?id={ok})"
+JARVIS_logo = "./userbot/resources/pics/-6163428037589314866_121.jpg"
+JARVIS_logo1 = "./userbot/resources/pics/-4965507108355287505_121.jpg"
+JARVIS_logo2 = "./userbot/resources/pics/-4965507108355287505_121.jpg"
+JARCIS_logo4 = "./userbot/resources/pics/-4965507108355287505_121.jpg"
+JARVIS_logo3 = "./userbot/resources/pics/-4965507108355287505_121.jpg"
+JARVISversion = "𝚅1.0"
 
-perf = "[ PYTHONBOT ]"
+perf = "[ Jarvis bot ]"
 #Developer here list
 DEVLIST = [
     "2033517108"
@@ -45,8 +45,8 @@ else:
 
 START_TIME = datetime.datetime.now()
 uptime = f"{str(datetime.datetime.now() - START_TIME).split('.')[0]}"
-my_channel = Config.YOUR_CHANNEL or "Python_Updata"
-my_group = Config.YOUR_GROUP or "Python_Userbot_Support"
+my_channel = Config.YOUR_CHANNEL or "Jarvis_Support_Official"
+my_group = Config.YOUR_GROUP or "JarvisUserBot_Support"
 if "@" in my_channel:
     my_channel = my_channel.replace("@", "")
 if "@" in my_group:
@@ -59,10 +59,10 @@ if mybot.startswith("@"):
 else:
     botname = f"@{mybot}"
 
-chnl_link = "https://t.me/Python_Updata"
-Python_channel = f"[✞︎t͛ẞ̸ Pythonẞø✞︎]({chnl_link})"
-grp_link = "https://t.me/Python_Userbot_Support"
-Python_grp = f"[Pythonẞø✞︎ Group]({grp_link})"
+chnl_link = "https://t.me/Jarvis_Support_Official"
+Python_channel = f"[SUPPORT]({chnl_link})"
+grp_link = "https://t.me/JarvisUserBot_Support"
+Python_grp = f"[Group]({grp_link})"
 
 WELCOME_FORMAT = """**Use these fomats in your welcome note to make them attractive.**
   {mention} :  To mention the user
