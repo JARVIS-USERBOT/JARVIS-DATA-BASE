@@ -1,2 +1,0 @@
-#main file
-from userbot.plugins.pmpermit import PM_WARNS
