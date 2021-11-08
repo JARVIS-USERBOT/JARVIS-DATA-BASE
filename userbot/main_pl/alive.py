@@ -19,7 +19,7 @@ async def reply_id(event):
 
 Bot = "JARVIS BOT"
 DEFAULTUSER = ALIVE_NAME or "JARVIS-BOT"
-JARVIS_IMG = Config.ALIVE_PIC
+JARVIS_IMG = Config.ALIVE_PIC or "https://te.legra.ph/file/7aa60202b95b798a2a4bb.jpg"
 CUSTOM_ALIVE_TEXT = Config.ALIVE_MSG or "JARVIS HERE"
 CUSTOM_YOUR_GROUP =Config.YOUR_GROUP or "@Jarvis_Support_Official"
 
