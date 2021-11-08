@@ -67,7 +67,6 @@ async def amireallyalive(alive):
     reply_to_id = await reply_id(alive)
 
     if  JARVIS_IMG:
-        JARVIS_caption = f"{CUSTOM_ALIVE_TEXT}**\n"
         
         JARVIS_cantion = f"""
         {CUSTOM_ALIVE_TEXT}
