@@ -102,7 +102,6 @@ msg = f"""
 **•⚜️•Øաղ̃ҽ̈r     : {mention}
 •🌹•𝖑𝖊ɠêɳ̃dẞø✞ : {JARVISversion}
 •🌹•✞ҽ̀lҽ́ƭhøղ  : {version.__version__}
-•🌹•Ãbûßê     :  {abuse_m}
 •🌹•ßudø      :  {is_sudo}
 •🌹•Bøt.      : {Config.BOY_OR_GIRL}
 """
