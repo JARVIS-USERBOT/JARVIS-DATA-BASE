@@ -6,7 +6,7 @@ from telethon.errors.rpcerrorlist import BotMethodInvalidError as dedbot
 from userbot.Config import Config
 from telethon import version
 from userbot import ALIVE_NAME, StartTime, JARVISversion
-from JARVISBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
+from JARVISBOT.utils import admin_cmd, edit_or_reply, sudo_cmd,delete
 from userbot.cmdhelp import CmdHelp
 from . import *
 async def reply_id(event):
@@ -111,11 +111,8 @@ botname = Config.BOT_USERNAME
 @bot.on(admin_cmd(pattern="alive$"))
 @bot.on(admin_cmd(pattern="alive$", allow_sudo=True))
 async def jarvis_a(event):
-    try:
-        jarvis = await bot.inline_query(botname, "alive")
-        await jarvis[0].click(event.chat_id)
-            except(noin, dedbot):
-        await eor(event, msg)
+    await event.edit_or_reply("Try .up")
+    await event.delete()
 
 CmdHelp("alive").add_command(
     'alive', None, 'υѕє αи∂ ѕєє'
