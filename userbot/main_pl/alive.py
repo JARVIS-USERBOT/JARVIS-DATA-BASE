@@ -68,7 +68,7 @@ async def amireallyalive(alive):
 
     if  JARVIS_IMG:
         
-        JARVIS_cantion = f"""
+        JARVIS_caption = f"""
         {CUSTOM_ALIVE_TEXT}
         ~~~~~~~~BOT STATUS~~~~~~~~
         JARVIS-BOT : {JARVISversion}
