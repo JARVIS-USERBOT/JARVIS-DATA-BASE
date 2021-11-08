@@ -56,7 +56,7 @@ if bool(ENV):
     else:
         basicConfig(format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
                     level=INFO)
-    LOGS = getLogger("[Pythonẞø† 9.0.8]")
+    LOGS = getLogger("JARVIS-BOT")
 
 try:
     if Config.HEROKU_API_KEY is not None or Config.HEROKU_APP_NAME is not None:
