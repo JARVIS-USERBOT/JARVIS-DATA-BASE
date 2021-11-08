@@ -65,6 +65,7 @@ async def amireallyalive(event):
     if event.fwd_from:
         return
     id = event.chat_id
+    reply_to_id = reply_id(event)
     if  JARVIS_IMG:
         
         JARVIS_caption = f"""
@@ -78,7 +79,7 @@ async def amireallyalive(event):
         
         
         await event.client.send_file(
-            id, JARVIS_IMG, caption=JARVIS_caption
+            id, JARVIS_IMG, caption=JARVIS_caption, reply_to=reply_to_id
         )
         await event.delete()
     else:
