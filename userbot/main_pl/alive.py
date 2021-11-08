@@ -64,13 +64,12 @@ uptime = get_readable_time((time.time() - StartTime))
 async def amireallyalive(event):
     if event.fwd_from:
         return
-    reply_to_id = await reply_id(event)
-
+    id = event.chat_id
     if  JARVIS_IMG:
         
         JARVIS_caption = f"""
         {CUSTOM_ALIVE_TEXT}
-        ~~~~~~~~BOT STATUS~~~~~~~~
+        _______BOT STATUS_______
         JARVIS-BOT : {JARVISversion}
         TLETHON    : {version.__version__}
         UP-TIME    : {uptime}
@@ -79,7 +78,7 @@ async def amireallyalive(event):
         
         
         await event.client.send_file(
-            event.chat_id, JARVIS_IMG, caption=JARVIS_caption, reply_to=reply_to_id
+            id, JARVIS_IMG, caption=JARVIS_caption
         )
         await event.delete()
     else:
