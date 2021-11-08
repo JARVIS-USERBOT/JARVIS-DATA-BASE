@@ -114,11 +114,11 @@ async def jarvis_a(event):
     try:
         jarvis = await bot.inline_query(botname, "alive")
         await jarvis[0].click(event.chat_id)
-            except (noin, dedbot):
+            except(noin, dedbot):
         await eor(event, msg)
 
 CmdHelp("alive").add_command(
-    'bot', None, 'υѕє αи∂ ѕєє'
+    'alive', None, 'υѕє αи∂ ѕєє'
 ).add_type(
     "Official"
 ).add()
