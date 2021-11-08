@@ -126,19 +126,19 @@ def load_module(shortname):
         import sys
         import importlib
         from pathlib import Path
-        path = Path(f"userbot/plugins/{shortname}.py")
-        name = "userbot.plugins.{}".format(shortname)
+        path = Path(f"userbot/main_pl/{shortname}.py")
+        name = "userbot.main_pl.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
-        LOGS.info("PYTHONBOT ~ " + shortname)
+        LOGS.info("JARVISBOT ~ " + shortname)
     else:
         import userbot.utils
         import sys
         import importlib
         from pathlib import Path
-        path = Path(f"userbot/plugins/{shortname}.py")
-        name = "userbot.plugins.{}".format(shortname)
+        path = Path(f"userbot/main_pl/{shortname}.py")
+        name = "userbot.main_pl.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         mod.bot = bot
@@ -165,7 +165,7 @@ def load_module(shortname):
         sys.modules["userbot.events"] = userbot.utils
         spec.loader.exec_module(mod)
         # for imports
-        sys.modules["userbot.plugins." + shortname] = mod
+        sys.modules["userbot.main_pl." + shortname] = mod
         LOGS.info("⚡JARVIS-BOT⚡ ~ " + shortname)
 
 
