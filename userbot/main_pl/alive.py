@@ -69,12 +69,13 @@ async def amireallyalive(event):
         
         JARVIS_caption = f"""
         {CUSTOM_ALIVE_TEXT}
-        _______BOT STATUS_______
-        JARVIS-BOT : {JARVISversion}
-        TLETHON    : {version.__version__}
-        UP-TIME    : {uptime}
-        OWNER      : {mention}
-        """
+        --------BOT STATUS--------
+       JARVIS-BOT : {JARVISversion}
+       TLETHON    : {version.__version__}
+       UP-TIME    : {uptime}
+       OWNER      : {mention}
+       [JOIN GROUP](buttonurl://https://t.me/JarvisUserBot_Support)
+       """
         
         
         await event.client.send_file(
