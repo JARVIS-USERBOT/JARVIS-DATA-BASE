@@ -7,7 +7,7 @@ from telethon import TelegramClient
 from var import Var
 from userbot.Config import Config
 from telethon.tl.functions.channels import InviteToChannelRequest, JoinChannelRequest
-from userbot.utils import load_module
+from userbot.utils import load_module, load_animations
 from userbot import LOAD_PLUG, LOGS, JARVISversion
 from pathlib import Path
 import asyncio
