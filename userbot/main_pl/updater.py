@@ -10,7 +10,7 @@ from userbot import CmdHelp, bot
 from userbot import bot as borg
 from userbot.utils import *
 import asyncio
-from userbot.utlis import admin_cmd
+from userbot.utils import admin_cmd
 config=Config
 
 requirements_path = path.join(
