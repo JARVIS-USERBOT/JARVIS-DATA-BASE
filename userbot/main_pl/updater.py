@@ -11,7 +11,7 @@ from userbot import bot as borg
 from userbot.utils import *
 import asyncio
 from userbot.utils import admin_cmd
-config=Config'
+config=Config
 
 
 requirements_path = path.join(
