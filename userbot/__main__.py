@@ -76,7 +76,7 @@ async def animations():
     with open(name) as f:
       path1 = Path(f.name)
       shortname = path1.stem
-      load_module(shortname.replace(".py", ""))
+      load_animations(shortname.replace(".py", ""))
 """
 async def assistant():
     path = "userbot/plugins/assistant/*.py"
