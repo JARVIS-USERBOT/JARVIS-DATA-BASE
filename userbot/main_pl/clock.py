@@ -1,7 +1,7 @@
 import asyncio
 from collections import deque
 
-from userbot.utils import admin_cmd
+from userbot.utils import admin_cmd,CmdHelp
 from . import *
 CmdHelp("clock").add_command(
    'clock', None, 'Check Fake Limitiation'
