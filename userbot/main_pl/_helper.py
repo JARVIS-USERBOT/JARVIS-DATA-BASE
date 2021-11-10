@@ -21,7 +21,7 @@ msg = f"""
   •        [♥️ 𝚁𝚎𝚙𝚘 ♥️](https://github.com/JARVIS-USERBOT/JARVIS-BOT)
   •        [♦️ Deploy ♦️]()
 
-  •  ©️ {jarvis_channel} ™
+  •  ©️ Love from @Its_py ™
 """
 botname = Config.BOT_USERNAME
 
