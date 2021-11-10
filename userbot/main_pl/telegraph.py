@@ -3,7 +3,7 @@ import datetime
 
 from PIL import Image
 from telegraph import Telegraph, exceptions, upload_file
-
+from userbot.cmd_help import CmdHelp
 from . import *
 
 PYTHON_NAME = Config.ALIVE_NAME or "Tony Stark"
