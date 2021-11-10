@@ -10,7 +10,7 @@ from userbot import CmdHelp, bot
 from userbot import bot as borg
 from userbot.utils import *
 import asyncio
-from userbot.events import lightning_cmd
+from userbot.utlis import admin_cmd
 config=Config
 
 requirements_path = path.join(
@@ -42,7 +42,7 @@ async def updateme_requirements():
         return repr(e)
 
 
-@borg.on(lightning_cmd(pattern="update ?(.*)"))
+@borg.on(admin_cmd(pattern="update ?(.*)"))
 async def upstream(ups):
     "For .update command, check if the bot is up to date, update if specified"
     await ups.edit("**✨Checking for new updates✨**")
