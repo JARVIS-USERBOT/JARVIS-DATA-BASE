@@ -1,6 +1,6 @@
 import requests as r
 from bs4 import BeautifulSoup as bs
-
+from userbot.cmdhelp import CmdHelp
 from . import *
 
 link = "https://fungenerators.com/random/truth-or-dare?option="
