@@ -151,7 +151,7 @@ def load_module(shortname):
         sys.modules["uniborg.util"] = userbot.utils
         mod.Config = Config
         mod.borg = bot
-        mod.PYTHONBOT = bot
+        mod.JARVISBOT = bot
         mod.edit_or_reply = edit_or_reply
         mod.delete_JARVIS = delete_JARVIS
         mod.eod = delete_JARVIS
@@ -166,6 +166,56 @@ def load_module(shortname):
         spec.loader.exec_module(mod)
         # for imports
         sys.modules["userbot.main_pl." + shortname] = mod
+        LOGS.info("⚡JARVIS-BOT⚡ ~ " + shortname)
+
+def load_animations(shortname):
+    if shortname.startswith("__"):
+        pass
+    elif shortname.endswith("_"):
+        import userbot.utils
+        import sys
+        import importlib
+        from pathlib import Path
+        path = Path(f"userbot/main_pl/animations/{shortname}.py")
+        name = "userbot.main_pl.animations.{}".format(shortname)
+        spec = importlib.util.spec_from_file_location(name, path)
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        LOGS.info("JARVISBOT ~ " + shortname)
+    else:
+        import userbot.utils
+        import sys
+        import importlib
+        from pathlib import Path
+        path = Path(f"userbot/main_pl/{shortname}.py")
+        name = "userbot.main_pl.{}".format(shortname)
+        spec = importlib.util.spec_from_file_location(name, path)
+        mod = importlib.util.module_from_spec(spec)
+        mod.bot = bot
+        #mod.JARVIS = JARVIS
+        mod.tgbot = bot.tgbot
+        mod.Var = Var
+        mod.command = command
+        mod.logger = logging.getLogger(shortname)
+        # support for uniborg
+        sys.modules["uniborg.util"] = userbot.utils
+        mod.Config = Config
+        mod.borg = bot
+        mod.JARVISBOT = bot
+        mod.edit_or_reply = edit_or_reply
+        mod.delete_JARVIS = delete_JARVIS
+        mod.eod = delete_JARVIS
+        mod.admin_cmd = admin_cmd
+        mod.legend_cmd = admin_cmd
+        mod.sudo_cmd = sudo_cmd
+        # support for JARVISBOT originals
+        sys.modules["JARVISBOT.utils"] = userbot.utils
+        sys.modules["JARVISBOT"] = userbot
+        # support for paperplaneextended
+        sys.modules["userbot.events"] = userbot.utils
+        spec.loader.exec_module(mod)
+        # for imports
+        sys.modules["userbot.main_pl.animations." + shortname] = mod
         LOGS.info("⚡JARVIS-BOT⚡ ~ " + shortname)
 
 
@@ -262,12 +312,12 @@ def admin_cmd(pattern=None, command=None, **args):
                 CMD_LIST.update({file_test: [cmd]})
         else:
             if len(Config.COMMAND_HAND_LER) == 2:
-                PYTHONreg = "^" + Config.COMMAND_HAND_LER
+                JARVISreg = "^" + Config.COMMAND_HAND_LER
                 reg = Config.COMMAND_HAND_LER[1]
             elif len(Config.COMMAND_HAND_LER) == 1:
-                PYTHONreg = "^\\" + Config.COMMAND_HAND_LER
+                JARVISreg = "^\\" + Config.COMMAND_HAND_LER
                 reg = Config.COMMAND_HAND_LER
-            args["pattern"] = re.compile(PYTHONreg + pattern)
+            args["pattern"] = re.compile(JARVISreg + pattern)
             if command is not None:
                 cmd = reg + command
             else:
@@ -526,7 +576,7 @@ async def delete_JARVIS(event, text, time=None, parse_mode=None, link_preview=No
     time = time or 5
     if event.sender_id in Config.SUDO_USERS:
         reply_to = await event.get_reply_message()
-        PYTHONevent = (
+        JARVISevent = (
             await reply_to.reply(text, link_preview=link_preview, parse_mode=parse_mode)
             if reply_to
             else await event.reply(
