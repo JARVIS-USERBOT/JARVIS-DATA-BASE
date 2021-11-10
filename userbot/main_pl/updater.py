@@ -1,3 +1,5 @@
+"""dont use
+have to fix error and many more"""
 from os import remove, execle, path, makedirs, getenv, environ
 from shutil import rmtree
 
