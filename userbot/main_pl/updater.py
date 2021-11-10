@@ -11,15 +11,16 @@ from userbot import bot as borg
 from userbot.utils import *
 import asyncio
 from userbot.utils import admin_cmd
-config=Config
+config=Config'
+
 
 requirements_path = path.join(
     path.dirname(path.dirname(path.dirname(__file__))), 'requirements.txt')
 
 HEROKU_API_KEY = config.HEROKU_API_KEY
 HEROKU_APP_NAME = config.HEROKU_APP_NAME
-GIT_REPO_NAME = "Dark_Fussion"
-UPSTREAM_REPO_URL = "https://github.com/JARVIS-USERBOT/JARVIS-BOT"
+GIT_REPO_NAME = "JARVIS-DATA-BASE"
+UPSTREAM_REPO_URL = "https://github.com/JARVIS-USERBOT/JARVIS-DATA-BASE"
 
 async def gen_chlog(repo, diff):
     ch_log = ''
