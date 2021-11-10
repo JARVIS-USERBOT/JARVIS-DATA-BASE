@@ -7,7 +7,7 @@ from telethon import TelegramClient
 from var import Var
 from userbot.Config import Config
 from telethon.tl.functions.channels import InviteToChannelRequest, JoinChannelRequest
-from userbot.utils import load_module, load_animations
+from userbot.utils import load_module
 from userbot import LOAD_PLUG, LOGS, JARVISversion
 from pathlib import Path
 import asyncio
@@ -101,10 +101,11 @@ async def assistant():
         print("Addons Not Loading")
 """
 bot.loop.run_until_complete(main_pl())
-
-bot.loop.run_until_complete(animations())
-print(f"""|JARVIS-BOT TURNED ON
-|_____________""")
+print(f"""
+ ____________________
+|                    |
+|JARVIS-BOT TURNED ON|
+|____________________|""")
 
 
 
