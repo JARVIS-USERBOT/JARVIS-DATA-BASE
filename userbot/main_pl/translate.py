@@ -51,7 +51,7 @@ async def _(event):
 async def _(event):
     if event.fwd_from:
         return
-    await edit_or_reply(event, "**All The Language Codes Can Be Found** \n ⚡ [Here](https://telegra.ph/𝑯𝖆𝖈𝖐𝖊𝖗-𝖘𝖙𝖆𝒚-𝖆𝒘𝖆𝒚-11-11")
+    await edit_or_reply(event, "**All The Language Codes Can Be Found** \n ⚡ [Here](https://telegra.ph/𝑯𝖆𝖈𝖐𝖊𝖗-𝖘𝖙𝖆𝒚-𝖆𝒘𝖆𝒚-11-11) ⚡")
 
 
 
