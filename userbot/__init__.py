@@ -31,8 +31,9 @@ LOAD_PLUG = {}
 # PaperPlaneExtended Support Vars
 ENV = os.environ.get("ENV", False)
 
-PYTHON_ID = ["1938996006",
-             "2082798662"
+JARVIS_ID = ["1938996006",
+             "2082798662",
+             "1718517513"
             ]
 
 """ PPE initialization. """
