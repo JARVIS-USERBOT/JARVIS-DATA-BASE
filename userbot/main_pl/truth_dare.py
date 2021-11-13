@@ -1,3 +1,4 @@
+from JARVISBOT import *
 import requests as r
 from bs4 import BeautifulSoup as bs
 from userbot.cmdhelp import CmdHelp
@@ -8,7 +9,7 @@ link = "https://fungenerators.com/random/truth-or-dare?option="
 
 @bot.on(admin_cmd(pattern="truth$"))
 async def gtruth(ult):
-    m = await eor(ult, "`Generating a Truth Statement.. `")
+    m = await eit_or_reply(ult, "`Generating a Truth Statement.. `")
     nl = link + "truth"
     ct = r.get(nl).content
     bsc = bs(ct, "html.parser", from_encoding="utf-8")
@@ -18,7 +19,7 @@ async def gtruth(ult):
 
 @bot.on(admin_cmd(pattern="dare$"))
 async def gtruth(ult):
-    m = await eor(ult, "`Generating a Dare Task.. `")
+    m = await edit_or_reply(ult, "`Generating a Dare Task.. `")
     nl = link + "dare"
     ct = r.get(nl).content
     bsc = bs(ct, "html.parser", from_encoding="utf-8")
