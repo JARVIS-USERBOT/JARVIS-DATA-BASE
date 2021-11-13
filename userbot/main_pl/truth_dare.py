@@ -1,4 +1,4 @@
-from JARVISBOT import *
+from JARVISBOT.utils import *
 import requests as r
 from bs4 import BeautifulSoup as bs
 from userbot.cmdhelp import CmdHelp
