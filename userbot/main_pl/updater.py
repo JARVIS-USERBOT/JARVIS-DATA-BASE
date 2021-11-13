@@ -5,7 +5,7 @@ import sys
 import git
 
 from userbot.Config import Config
-from PYTHONBOT.utils import admin_cmd
+from JARVISBOT.utils import admin_cmd
 from . import *
 # -- Constants -- #
 IS_SELECTED_DIFFERENT_BRANCH = (
