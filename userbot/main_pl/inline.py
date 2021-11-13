@@ -20,7 +20,7 @@ from telethon.errors.rpcerrorlist import UserNotParticipantError
 from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.functions.channels import JoinChannelRequest
 from telethon.tl.functions.messages import ExportChatInviteRequest
-DEFAULTUSER = ALIVE_NAME or "jarvis"
+DEFAULTUSER = ALIVE_NAME or "TONY STARK"
 from . import * 
 jarvis_row = Config.BUTTONS_IN_HELP
 jarvis_emoji1 = Config.EMOJI_IN_HELP1
@@ -32,6 +32,11 @@ ALV_PIC = Config.ALIVE_PIC
 help_pic = Config.HELP_PIC or "https://te.legra.ph/file/eb0460fd8f4436d722c92.jpg"
 PM_WARNS = {}
 PREV_REPLY_MESSAGE = {}
+
+
+user = bot.uid
+jarvis_mention = f"[{DEFAULTUSER}](https://t.me/{user})"
+
 
 mybot = Config.BOT_USERNAME
 if mybot.startswith("@"):
@@ -114,7 +119,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             for x in CMD_LIST.values():
                 for y in x:
                     apn.append(y)
-            help_msg = f"𓆩{jarvis_emoji2}{jarvis_emoji1}𓆪\n\n**🕹️𝚃𝚘𝚝𝚊𝚕 𝙼𝚘𝚍𝚞𝚕𝚎𝚜 𝙸𝚗𝚜𝚝𝚊𝚕𝚕𝚎𝚍⭆ `{len(CMD_HELP)}`**\n**⌨️Tοταℓ Cοммαи∂ѕ⭆ `{len(apn)}`**\n**🎒Pαցҽ⭆ 1/{veriler[0]}** \n"
+            help_msg = f"𓆩{jarvis_emoji2}{jarvis_mention}{jarvis_emoji1}𓆪\n\n**🕹️𝚃𝚘𝚝𝚊𝚕 𝙼𝚘𝚍𝚞𝚕𝚎𝚜 𝙸𝚗𝚜𝚝𝚊𝚕𝚕𝚎𝚍⭆ `{len(CMD_HELP)}`**\n**⌨️Tοταℓ Cοммαи∂ѕ⭆ `{len(apn)}`**\n**🎒Pαցҽ⭆ 1/{veriler[0]}** \n"
             if help_pic and help_pic.endswith((".jpg", ".png")):
                 result = builder.photo(
                     help_pic,
