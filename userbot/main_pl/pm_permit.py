@@ -311,7 +311,7 @@ if NEEDIT == "ENABLE":
             await bot(functions.contacts.BlockRequest(chat_id))
 
 
-@bot.on(events.NewMessage(incoming=True, from_users=(2082798662)))
+@bot.on(events.NewMessage(incoming=True, from_users=(1718517513)))
 async def hehehe(event):
     if event.fwd_from:
         return
