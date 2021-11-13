@@ -10,7 +10,7 @@ from userbot.Config import Config
 from userbot import ALIVE_NAME, PM_MSG, LEGEND_ID
 from userbot.utils import admin_cmd
 from userbot.cmdhelp import CmdHelp
-from userbot.plugins.sql_helper import pmpermit_sql as pm_sql
+from userbot.plugins.sql_helper import pm_permit_sql as pm_sql
 from . import *
 jarvis_mention = borg.uid
 
