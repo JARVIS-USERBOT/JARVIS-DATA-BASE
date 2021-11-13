@@ -52,7 +52,7 @@ if PM_ON_OFF != "DISABLE":
             if not event.chat_id in PM_WARNS:
                 pm_sql.approve(event.chat_id, "outgoing")
                 bruh = """USER AUTO APROVED
-                REASON: OUTGOING MESSAGE"""
+REASON: OUTGOING MESSAGE"""
                 rko = await bot.send_message(event.chat_id, bruh)
                 await asyncio.sleep(3)
                 await rko.delete()
