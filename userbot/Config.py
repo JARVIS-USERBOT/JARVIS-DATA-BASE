@@ -148,8 +148,8 @@ if ENV:
         ALIVE_MSG = os.environ.get("ALIVE_MSG", None)
         PM_MSG = os.environ.get("PM_MSG", None)
         INSTANT_BLOCK = os.environ.get("INSTANT_BLOCK", "DISABLE")
-        YOUR_GROUP = os.environ.get("YOUR_GROUP", "@Python_Userbot_Support")
-        YOUR_CHANNEL = os.environ.get("YOUR_CHANNEL", "@Python_Updata.")
+        YOUR_GROUP = os.environ.get("YOUR_GROUP", "@JarvisUserBot_Support")
+        YOUR_CHANNEL = os.environ.get("YOUR_CHANNEL", "@Jarvis_Support_Official")
         BOT_PIC = os.environ.get("ALIVE_PIC", None)
         #auto bio
         BIO_MSG = os.environ.get("ALIVE_MSG", None)
@@ -157,9 +157,9 @@ if ENV:
         LYDIA_API = os.environ.get("LYDIA_API",None)
         PLUGIN_CHANNEL = os.environ.get("PLUGIN_CHANNEL",None)
         UPSTREAM_REPO = os.environ.get(
-            "UPSTREAM_REPO", "https://github.com/LEGEND-LX/PYTHONBOT-V9.0.8"
+            "UPSTREAM_REPO", "https://github.com/JARVIS-USERBOT/JARVIS-BOT"
         )
-        PYTHON_STRING = os.environ.get("PYTHON_STRING", None)
+        JARVIS_STRING = os.environ.get("JARVIS_STRING", None)
         BOT_MODE = os.environ.get("BOT_MODE", "ON")
         BOTLOG = False
         ABUSE = os.environ.get("ABUSE", None)
