@@ -7,7 +7,7 @@ from telethon.sync import custom
 from telethon import events, functions, Button, custom
 from telethon.tl.functions.users import GetFullUserRequest
 from userbot.Config import Config
-from userbot import ALIVE_NAME, PM_MSG, LEGEND_ID
+from userbot import ALIVE_NAME, PM_MSG, JARVIS_ID
 from userbot.utils import admin_cmd
 from userbot.cmdhelp import CmdHelp
 from userbot.plugins.sql_helper import pm_permit_sql as pm_sql
