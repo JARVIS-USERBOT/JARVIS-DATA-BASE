@@ -33,7 +33,7 @@ help_pic = Config.HELP_PIC or "https://te.legra.ph/file/eb0460fd8f4436d722c92.jp
 PM_WARNS = {}
 PREV_REPLY_MESSAGE = {}
 
-
+chnl_link = "https://t.me/Jarvis_Support_Official"
 user = bot.uid
 jarvis_mention = f"[{DEFAULTUSER}](https://t.me/{user})"
 
@@ -181,7 +181,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 result = builder.document(
                     ALV_PIC,
                     text=pyt_thon,
-                    title="jarvisBot Alive",
+                    title="JARVISBot Alive",
                     buttons=alv_btn,
                     link_preview=False,
                 )
