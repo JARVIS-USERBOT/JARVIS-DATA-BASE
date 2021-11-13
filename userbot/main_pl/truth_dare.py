@@ -9,7 +9,7 @@ link = "https://fungenerators.com/random/truth-or-dare?option="
 
 @bot.on(admin_cmd(pattern="truth$"))
 async def gtruth(ult):
-    m = await eit_or_reply(ult, "`Generating a Truth Statement.. `")
+    m = await edit_or_reply(ult, "`Generating a Truth Statement.. `")
     nl = link + "truth"
     ct = r.get(nl).content
     bsc = bs(ct, "html.parser", from_encoding="utf-8")
