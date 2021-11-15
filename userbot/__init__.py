@@ -156,7 +156,7 @@ except:
     # Upstream Repo
     UPSTREAM_REPO_URL = os.environ.get(
     "UPSTREAM_REPO_URL",
-    "https://github.com/JARVIS-USERBOT/JJARVIS-DATA-BASE.git")
+    "https://github.com/JARVIS-USERBOT/JARVIS-DATA-BASE.git")
 
     # Last.fm Module
     BIO_PREFIX = os.environ.get("BIO_PREFIX", None)
