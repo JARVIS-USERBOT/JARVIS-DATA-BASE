@@ -7,12 +7,12 @@ import datetime
 from telethon import version
 JARVIS_USER = bot.me.first_name
 TonyStark = bot.uid
-legend_mention = f"[{JARVIS_USER}](tg://user?id={TonyStark})"
-LEGEND_logo = "./userbot/resources/pics/-6163428037589314866_121.jpg"
-LEGEND_logo1 = "./userbot/resources/pics/-4965507108355287505_121.jpg"
-LEGEND_logo2 = "./userbot/resources/pics/-4965507108355287505_121.jpg"
-LEGEND_logo4 = "./userbot/resources/pics/-4965507108355287505_121.jpg"
-LEGEND_logo3 = "./userbot/resources/pics/-4965507108355287505_121.jpg"
+jarvis_mention = f"[{JARVIS_USER}](tg://user?id={TonyStark})"
+JARVIS_logo = "./userbot/resources/pics/-6163428037589314866_121.jpg"
+JARVIS_logo1 = "./userbot/resources/pics/-4965507108355287505_121.jpg"
+JARVIS_logo2 = "./userbot/resources/pics/-4965507108355287505_121.jpg"
+JARVIS_logo4 = "./userbot/resources/pics/-4965507108355287505_121.jpg"
+JARVIS_logo3 = "./userbot/resources/pics/-4965507108355287505_121.jpg"
 
 
 perf = "[ The Jarvis-bot ]"
