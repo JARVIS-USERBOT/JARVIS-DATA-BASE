@@ -19,7 +19,7 @@ msg = f"""
 **⚜ JARVIS-BOT ⚜**
 
   •        [♥️ 𝚁𝚎𝚙𝚘 ♥️](https://github.com/JARVIS-USERBOT/JARVIS-BOT)
-  •        [♦️ Deploy ♦️]()
+  •        [♦️ **Repl** ♦️](https://replit.com/@py1000/JARVIS-USERBOTSTRING#main.py)
 
   •  ©️ Love from @Its_py ™
 """
