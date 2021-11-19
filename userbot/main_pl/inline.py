@@ -34,8 +34,6 @@ PM_WARNS = {}
 PREV_REPLY_MESSAGE = {}
 
 chnl_link = "https://t.me/Jarvis_Support_Official"
-user = bot.uid
-jarvis_mention = f"[{DEFAULTUSER}](https://t.me/{user})"
 
 
 mybot = Config.BOT_USERNAME
@@ -306,7 +304,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
         else:
             await event.edit(
-                f"🥴 **Nikal lawde\nPehli fursat me nikal**"
+                f"🥴 **This Is Not For You Bye**"
             )
             await event.client(functions.contacts.BlockRequest(event.query.user_id))
             target = await event.client(GetFullUserRequest(event.query.user_id))
@@ -355,7 +353,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                     link_preview=False,
                 )
             else:
-                reply_pop_up_alert = "οн ϲοммοи γαяя υ τнιиκ υ ϲαи ϲℓιϲκ οи ιτ😁😁😁. ∂єρℓογ υя οωи ϐοτ. © jarvisẞø†™"
+                reply_pop_up_alert = "This Is Jarvis . Made For Tony Stark"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
         
 
@@ -365,7 +363,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             veriler = custom.Button.inline(f"{jarvis_emoji1} Re-Open Menu {jarvis_emoji2}", data="reopen")
             await event.edit(f"**⚜️ jarvisẞø† Mêñû Prõvîdêr háš běěn čłøšĕd by {jarvis_mention} ⚜️**\n\n**Bot Of :**  {jarvis_mention}\n\n            [©️jarvisẞø†]({chnl_link})", buttons=veriler, link_preview=False)
         else:
-            reply_pop_up_alert = "κγα υиgℓι καя янє нο мєяє ϐοτ ραя αgαя ϲнαнιγє τοн κнυ∂ κα ϐαиα ℓο иα. Aα נατє нο υиgℓι καяиє мєяє ϐοτ ρє.   ©jarvisẞø†"
+            reply_pop_up_alert = "This Is Jarvis . Made For Tony Stark"
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
    
 
@@ -379,13 +377,13 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 apn.append(y)
         if event.query.user_id == bot.uid or event.query.user_id in Config.SUDO_USERS:
             await event.edit(
-                f"**𓆩♥️{jarvis_emoji2}{jarvis_mention}{jarvis_emoji1}𓆪\n\n**🕹️𝚃𝚘𝚝𝚊𝚕 𝙼𝚘𝚍𝚞𝚕𝚎𝚜 𝙸𝚗𝚜𝚝𝚊𝚕𝚕𝚎𝚍⭆ `{len(CMD_HELP)}`**\n**⌨️Tοταℓ Cοммαи∂ѕ⭆ `{len(apn)}`**\n**🎒Pαցҽ⭆ 1/{veriler[0]}**",
+                f"**𓆩{jarvis_emoji2}{jarvis_mention}{jarvis_emoji1}𓆪\n\n**🕹️𝚃𝚘𝚝𝚊𝚕 𝙼𝚘𝚍𝚞𝚕𝚎𝚜 𝙸𝚗𝚜𝚝𝚊𝚕𝚕𝚎𝚍⭆ `{len(CMD_HELP)}`**\n**⌨️Tοταℓ Cοммαи∂ѕ⭆ `{len(apn)}`**\n**🎒Pαցҽ⭆ 1/{veriler[0]}**",
                 buttons=veriler[1],
                 link_preview=False,
             )
         else:
             return await event.answer(
-                "κγα υиgℓι καя янє нο мєяє ϐοτ ραя αgαя ϲнαнιγє τοн κнυ∂ κα ϐαиα ℓο иα αα נατє нο υиgℓι καяиє мєяє ϐοτ ρє.   ©jarvisẞø†",
+                "This Is Jarvis . Made For Tony Stark",
                 cache_time=0,
                 alert=True,
             )
@@ -419,7 +417,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             )
         else:
             return await event.answer(
-                "Hoo gya aapka. Kabse tapar tapar dabae jaa rhe h. Khudka bna lo na agr chaiye to. ©jarvisẞø†™",
+                "This Is Jarvis . Made For Tony Stark",
                 cache_time=0,
                 alert=True,
             )
@@ -463,7 +461,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             )
         else:
             return await event.answer(
-                "ᵃᵇʰⁱ ᵗᵃᵏ ⁿʰⁱ ˢᵃᵐʲʰᵃ ᵏʰᵘᵈᵏᵃ ᵇᵃⁿᵃ ˡᵒ ⁿᵃ ᵗᵒʰ ᵘˢᵉ ᵏᵃʳⁿᵃ ʰ ᵗᵒʰ ᵏʸᵃ ᵘⁿᵍˡⁱ ᵏᵃʳ ʳʰᵉ ʰᵒ.🤦‍♂️🤦‍♂️🤦‍♂️ ©jarvisẞø†™ ",
+                "This Is Jarvis . Made For Tony Stark",
                 cache_time=0,
                 alert=True,
             )
