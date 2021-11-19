@@ -103,7 +103,7 @@ async def kang(args):
         packnick = (
             f"{jarvis} Vol.{pack}"
             if jarvis
-            else f"@{user.username}'s legend Vol.{pack}"
+            else f"@{user.username}'s tony stark Vol.{pack}"
         )
         cmd = "/newpack"
         file = io.BytesIO()
@@ -137,7 +137,7 @@ async def kang(args):
                     pack += 1
                     packname = f"HB_{user.username}_by_{user.username}_{pack}"
                     packnick = (
-                        f"{legend} Vol.{pack}"
+                        f"{jarvis} Vol.{pack}"
                         if legend
                         else f"@{user.username}'s legend Vol.{pack}"
                     )
