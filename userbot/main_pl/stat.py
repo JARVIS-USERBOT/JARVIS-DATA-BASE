@@ -28,11 +28,11 @@ Ping       : {ms}
 async def stat(jarvis_op):
   if jarvis_op.fwd_from:
         return
-    start = datetime.now()
-    message = await jarvis_op.eor("Stats")
-    end = datetime.now()
-    ms = (end - start).microseconds / 1000
-    await jarvis_op.eor(stat_message)
+  start = datetime.now()
+  message = await jarvis_op.eor("Stats")
+  end = datetime.now()
+  ms = (end - start).microseconds / 1000
+  await jarvis_op.eor(stat_message)
 
 CmdHelp("stat").add_command("stat", None, "one and only stat command").add_warning(
     "Harmless Module✅"
