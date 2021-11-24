@@ -16,12 +16,12 @@ bye_rand = random.choice(bye_message)
 @bot.on(admin_cmd(pattern = "hi$",outgoing = True))
 @bot.on(sudo_cmd(pattern = "hi$",allow_sudo = True))
 async def hi(tony):
-  await tony.edit_or_reply(hello_rand)
+  await tony.edit_or_reply(tony,hello_rand)
 
 @bot.on(admin_cmd(pattern = "bye$",outgoing = True))
 @bot.on(sudo_cmd(pattern = "bye$",allow_sudo= True))
 async def bye(tony):
-  await tony.edit_or_reply(bye_rand)
+  await tony.edit_or_reply(tony,bye_rand)
 
 
 CmdHelp("greeting").add_command(
