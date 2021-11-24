@@ -5,7 +5,7 @@ from userbot import ALIVE_NAME
 from userbot.cmdhelp import CmdHelp
 
 ts = "Tony Stark"
-jarvis_mention = f"[{DEFAULTUSER or ts}](tg://user?id={TonyStark})"
+jarvis_mention = f"[{JARVIS_USER}](tg://user?id={TonyStark})"
 
 hello_message = ["Hi Guys","Hi!","Hello There","I Am Back",f"{jarvis_mention} arived!"]
 bye_message = ["Bye","I Am Going!",f"{jarvis_mention} going","Adios"]
