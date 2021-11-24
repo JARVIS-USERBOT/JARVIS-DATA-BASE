@@ -25,7 +25,7 @@ async def bye(tony):
 
 
 CmdHelp("greeting").add_command(
-   'hi', None, 'some random hello messages'
-).add().add_command(
-   'bye', None, 'some random bye messages'
-).add()
+  "hi", None, "Sends a random hello message"
+).add_command(
+  "bye", None, "Sends a random bye message"
+).add_command
