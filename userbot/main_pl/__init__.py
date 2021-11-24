@@ -5,7 +5,7 @@ from userbot.cmdhelp import CmdHelp
 
 import datetime
 from telethon import version
-JARVIS_USER = bot.me.first_name
+JARVIS_USER = bot.me.first_name or "Tony Stark"
 TonyStark = bot.uid
 jarvis_mention = f"[{JARVIS_USER}](tg://user?id={TonyStark})"
 JARVIS_logo = "./userbot/resources/pics/-6163428037589314866_121.jpg"
