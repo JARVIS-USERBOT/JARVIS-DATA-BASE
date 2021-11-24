@@ -1,4 +1,4 @@
-"""import random
+import random
 from . import *
 from JARVISBOT.utils import admin_cmd,sudo_cmd,eor
 from userbot import ALIVE_NAME
@@ -22,4 +22,10 @@ async def hi(tony):
 @bot.on(sudo_cmd(pattern = "bye$",allow_sudo= True))
 async def bye(tony):
   tiny.eor(bye_rand)
-"""
+
+
+CmdHelp("greeting").add_command(
+   'hi', None, 'some random hello messages'
+).add().add_command(
+   'bye', None, 'some random bye messages'
+).add()
