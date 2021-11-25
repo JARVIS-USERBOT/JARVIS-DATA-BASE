@@ -44,7 +44,7 @@ async def set_not_afk(event):
     if ".afk" not in current_message and "yes" in USER_AFK:  # pylint:disable=E0602
         JARVISBOT = await borg.send_message(
             event.chat_id,
-            "[{DEFAULTUSER}](tg://user?id={JARVIS}) is back | AFK TIME:"
+            f"[{DEFAULTUSER}](tg://user?id={JARVIS}) is back | AFK TIME:"
             + total_afk_time
             + "`", file=JARVISpic
         )
@@ -52,7 +52,7 @@ async def set_not_afk(event):
             await borg.send_message(  # pylint:disable=E0602
                 Config.PLUGIN_CHANNEL,  # pylint:disable=E0602
                 "#AFKFALSE \nSet AFK mode to False\nReply to pic and use .afk reason"
-                + "[{DEFAULTUSER}](tg://user?id={JARVIS}) is back | AFK TIME:"
+                + f"[{DEFAULTUSER}](tg://user?id={JARVIS}) is back | AFK TIME:"
                 + total_afk_time
             )
         except Exception as e:  # pylint:disable=C0103,W0703
