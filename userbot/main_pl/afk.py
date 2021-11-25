@@ -96,10 +96,10 @@ async def on_afk(event):
         msg = None
         
         message_to_reply = (
-            f"[{DEFAULTUSER}](tg://user?id={JARVIS}) is currently on AFK\n\n•Afk Since : `{total_afk_time}`\n"
+            f"[{DEFAULTUSER}](tg://user?id={JARVIS}) is currently AFK\n\n•Afk Since : `{total_afk_time}`\n"
             + f"•Reason : `{reason}`"
   if reason
-           else f"[{DEFAULTUSER}](tg://user?id={JARVIS}) is currently on AFK \n\n He will reply you when he comes online \n\n•Afk Since : {total_afk_time} \n\n•Reason : {reason} "
+           else f"[{DEFAULTUSER}](tg://user?id={JARVIS}) is currently AFK \n\n He will reply you when he comes online \n\n•Afk Since : {total_afk_time} \n\n•Reason : {reason} "
         )
         msg = await event.reply(message_to_reply, file=JARVISpic)
         await asyncio.sleep(2)
