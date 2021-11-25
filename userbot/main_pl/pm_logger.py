@@ -18,7 +18,7 @@ logging.basicConfig(
 NO_PM_LOG_USERS = []
 
 BOTLOG = True
-BOTLOG_CHATID = Config.PM_LOGGR_BOT_API_ID
+BOTLOG_CHATID = Config.LOGGER_ID
 
 
 @bot.on(admin_cmd(pattern=r"save(?: |$)([\s\S]*)", outgoing=True))
