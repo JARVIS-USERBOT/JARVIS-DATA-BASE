@@ -44,7 +44,7 @@ async def set_not_afk(event):
     if ".afk" not in current_message and "yes" in USER_AFK:  # pylint:disable=E0602
         JARVISBOT = await borg.send_message(
             event.chat_id,
-            "🔥ι αм ϐαϲκ αℓινє !\n**и𝔬 𝔏οиgєя 𝔞ƒκ.**\n⏱️ `աαs αƒk fοя:``"
+            "[{DEFAULTUSER}](tg://user?id={JARVIS}) is back | AFK TIME:"
             + total_afk_time
             + "`", file=JARVISpic
         )
@@ -52,14 +52,14 @@ async def set_not_afk(event):
             await borg.send_message(  # pylint:disable=E0602
                 Config.PRIVATE_GROUP_BOT_API_ID,  # pylint:disable=E0602
                 "#AFKFALSE \nSet AFK mode to False\nReply to pic and use .afk reason"
-                + "🔥ι αм ϐαϲκ αℓινє\n**𝔑𝔬 𝔏𝔬𝔫𝔤𝔢𝔯 𝔞𝔣𝔨.**\n⏱️ `աαs αբk for:``"
+                + "[{DEFAULTUSER}](tg://user?id={JARVIS}) is back | AFK TIME:"
                 + total_afk_time
             )
         except Exception as e:  # pylint:disable=C0103,W0703
             await borg.send_message(  # pylint:disable=E0602
                 event.chat_id,
-                "Please set `PRIVATE_GROUP_BOT_API_ID` "
-                + "for the proper functioning of afk functionality "
+                "Error cant send message to PRAIVATE_GROUP"
+                + "MAKE SURE YOUR PRAIVATE_API_ID IS CORRECT"
                 + "Ask in @JarvisUserBot_Support to get help setting this value\n\n `{}`".format(str(e)),
                 reply_to=event.message.id,
                 silent=True,
@@ -96,10 +96,10 @@ async def on_afk(event):
         msg = None
         
         message_to_reply = (
-            f"⚜️𓆩[{DEFAULTUSER}](tg://user?id={JARVIS})𓆪 ιѕ Cûřřently unavailable\n\n•♦️•Ꮮ𝚊𝚜𝚝 𝚂𝚎𝚎𝚗 : `{total_afk_time}`\n"
-            + f"•♦️•Ꭱ𝚎𝚊𝚜𝚘𝚗 : `{reason}`"
+            f"[{DEFAULTUSER}](tg://user?id={JARVIS}) is currently on AFK\n\n•Ꮮ𝚊𝚜𝚝 𝚂𝚎𝚎𝚗 : `{total_afk_time}`\n"
+            + f"•Ꭱ𝚎𝚊𝚜𝚘𝚗 : `{reason}`"
   if reason
-           else f"ᎻᎬᎽ Տιя / Ꮇιѕѕ🤔!\nᏆ αм ϲυяяєиτℓγ υиαναιℓαϐℓє😛. ι яєρℓγ υ αƒτєя ϲοмє ϐαϲκοиℓιиє.\n__Since when, you ask? From__ `{total_afk_time}`\nI'll be back when I feel to come🚶😛"
+           else f"[{DEFAULTUSER}](tg://user?id={JARVIS}) is currently on AFK \n\n He will reply you when he comes online \n\n •Ꮮ𝚊𝚜𝚝 𝚂𝚎𝚎𝚗 : {total_afk_time} \n\n •Ꭱ𝚎𝚊𝚜𝚘𝚗 : {reason} "
         )
         msg = await event.reply(message_to_reply, file=JARVISpic)
         await asyncio.sleep(2)
@@ -137,10 +137,10 @@ async def _(event):
         USER_AFK = f"yes: {reason} {JARVISpic}"  # pylint:disable=E0602
         if reason:
             await borg.send_message(
-                event.chat_id, f"🌷𝙸'𝙼 𝙶𝚘𝚒𝚗𝚐 𝙰𝚏𝚔🚶 \n🔥𝚁𝚎𝚊𝚜𝚘𝚗:- `{reason}`", file=JARVISpic
+                event.chat_id, f"I Am Going Afk 𝚔 \n𝚁𝚎𝚊𝚜𝚘𝚗:- `{reason}`", file=JARVISpic
             )
         else:
-            await borg.send_message(event.chat_id, f"ι'м gοιиg αƒκ !🚶", file=JARVISpic)
+            await borg.send_message(event.chat_id, f"I Am Going Afk 𝚔 \n𝚁𝚎𝚊𝚜𝚘𝚗:- `{reason}`", file=JARVISpic)
         await asyncio.sleep(0.001)
         await event.delete()
         try:
