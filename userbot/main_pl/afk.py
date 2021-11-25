@@ -137,7 +137,7 @@ async def _(event):
         USER_AFK = f"yes: {reason} {JARVISpic}"  # pylint:disable=E0602
         if reason:
             await borg.send_message(
-                event.chat_id, f"I Am Going Afk 𝚔 \n𝚁𝚎𝚊𝚜𝚘𝚗:- `{reason}`", file=JARVISpic
+                event.chat_id, f"I Am Going Afk  \n𝚁𝚎𝚊𝚜𝚘𝚗:- `{reason}`", file=JARVISpic
             )
         else:
             await borg.send_message(event.chat_id, f"I Am Going Afk 𝚔 \n𝚁𝚎𝚊𝚜𝚘𝚗:- `{reason}`", file=JARVISpic)
