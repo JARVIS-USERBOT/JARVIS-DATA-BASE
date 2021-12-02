@@ -211,8 +211,8 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 title="Repository",
                 text=f"**⚜ OP JARVIS BOT ⚜**",
                 buttons=[
-                    [Button.url("♥️ 𝚁𝚎𝚙𝚘 ♥", "https://github.com/JARVIS-USERBOT/JARVIS-BOT")],
-                    [Button.url("♦️ Relp ♦️", "https://t.me/Its_py")],
+                    [Button.url("♥️ **Repo** ♥", "https://github.com/JARVIS-USERBOT/JARVIS-BOT")],
+                    [Button.url("♦️ **Creator** ♦️", "https://t.me/Its_py")],
                 ],
             )
 
@@ -238,10 +238,10 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                     ],
                     [
                         custom.Button.url(
-                            "✨ REPO ✨", "https://github.com/JARVIS-USERBOT/JARVISBOT"),
+                            "⚡ REPO ⚡", "https://github.com/JARVIS-USERBOT/JARVISBOT"),
                         custom.Button.url
                     (
-                            "🔰 TUTORIAL 🔰", "https://youtu.be/yvNKVtXAndo"
+                            "⚡ TUTORIAL ⚡", "https://youtu.be/gkVIksTnERI"
                     )
                     ],
                 ],
@@ -361,9 +361,9 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
     async def on_plug_in_callback_query_handler(event):
         if event.query.user_id == bot.uid or event.query.user_id in Config.SUDO_USERS:
             veriler = custom.Button.inline(f"{jarvis_emoji1} Re-Open Menu {jarvis_emoji2}", data="reopen")
-            await event.edit(f"**⚜️ jarvisẞø† Mêñû Prõvîdêr háš běěn čłøšĕd by {jarvis_mention} ⚜️**\n\n**Bot Of :**  {jarvis_mention}\n\n            [©️jarvisẞø†]({chnl_link})", buttons=veriler, link_preview=False)
+            await event.edit(f"**⚜️ Menue cloced \n\n love from [Tony Stark](https://t.me/@its_py) {jarvis_mention} ⚜️**\n\n**Bot Of :**  {jarvis_mention}\n\n            [©️jarvisẞø†]({chnl_link})", buttons=veriler, link_preview=False)
         else:
-            reply_pop_up_alert = "This Is Jarvis . Made For Tony Stark"
+            reply_pop_up_alert = "This Is Jarvis . Made For Tony Stark . If you want deploy your own."
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
    
 
@@ -377,13 +377,13 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 apn.append(y)
         if event.query.user_id == bot.uid or event.query.user_id in Config.SUDO_USERS:
             await event.edit(
-                f"**𓆩{jarvis_emoji2}{jarvis_mention}{jarvis_emoji1}𓆪\n\n**🕹️𝚃𝚘𝚝𝚊𝚕 𝙼𝚘𝚍𝚞𝚕𝚎𝚜 𝙸𝚗𝚜𝚝𝚊𝚕𝚕𝚎𝚍⭆ `{len(CMD_HELP)}`**\n**⌨️Tοταℓ Cοммαи∂ѕ⭆ `{len(apn)}`**\n**🎒Pαցҽ⭆ 1/{veriler[0]}**",
+                f"**{jarvis_emoji2}{jarvis_mention}{jarvis_emoji1}\n\n**🕹️**Files in Data Base**⭆ `{len(CMD_HELP)}`**\n** **Commands**⭆ `{len(apn)}`**\n** **🎒Current page⭆ 1/{veriler[0]}**",
                 buttons=veriler[1],
                 link_preview=False,
             )
         else:
             return await event.answer(
-                "This Is Jarvis . Made For Tony Stark",
+                "This Is Jarvis . Made For Tony Stark . If you want deploy your own.",
                 cache_time=0,
                 alert=True,
             )
@@ -461,7 +461,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             )
         else:
             return await event.answer(
-                "This Is Jarvis . Made For Tony Stark",
+                "This Is Jarvis . Made For Tony Stark . If you want deploy your own.",
                 cache_time=0,
                 alert=True,
             )
