@@ -215,7 +215,7 @@ SUDO_LIST = {}
 
 JarvisBot = TelegramClient(
     session="Legend-Bot",
-    api_id=Config.APP_ID,
+    api_id=Config.API_ID,
     api_hash=Config.API_HASH,
     connection=ConnectionTcpAbridged,
     auto_reconnect=True,
