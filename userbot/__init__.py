@@ -213,7 +213,7 @@ ISAFK = False
 AFKREASON = None
 SUDO_LIST = {}
 
-LegendBot = TelegramClient(
+JarvisBot = TelegramClient(
     session="Legend-Bot",
     api_id=Config.APP_ID,
     api_hash=Config.API_HASH,
@@ -223,8 +223,7 @@ LegendBot = TelegramClient(
 ).start(bot_token=Config.BOT_TOKEN)
 
 
-bot = kbot = Legend
-tbot = LegendBot
+tbot = Jarvisbot
 
 
 from userbot.helpers import *
