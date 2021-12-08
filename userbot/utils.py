@@ -156,7 +156,7 @@ def load_module(shortname):
         mod.delete_JARVIS = delete_JARVIS
         mod.eod = delete_JARVIS
         mod.admin_cmd = admin_cmd
-        mod.legend_cmd = admin_cmd
+        mod.jarvis_cmd = admin_cmd
         mod.sudo_cmd = sudo_cmd
         # support for JARVISBOT originals
         sys.modules["JARVISBOT.utils"] = userbot.utils
