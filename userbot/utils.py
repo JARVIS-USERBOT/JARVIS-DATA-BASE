@@ -18,7 +18,7 @@ from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantCreator
 
 from var import Var
 
-from userbot import CMD_LIST, LOAD_PLUG, LOGS, SUDO_LIST, bot
+from userbot import CMD_LIST, LOAD_PLUG, LOGS, SUDO_LIST, bot,JarvisBot
 from userbot.helpers.exceptions import CancelProcess
 from userbot.Config import Config
 from userbot import bot
@@ -143,6 +143,8 @@ def load_module(shortname):
         mod = importlib.util.module_from_spec(spec)
         mod.bot = bot
         #mod.JARVIS = JARVIS
+        mod.Jarvisbot = JarvisBot
+        mod.tbot = JarvisBot
         mod.tgbot = bot.tgbot
         mod.Var = Var
         mod.command = command
