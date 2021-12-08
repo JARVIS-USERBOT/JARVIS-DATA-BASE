@@ -117,7 +117,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             for x in CMD_LIST.values():
                 for y in x:
                     apn.append(y)
-            help_msg = f"{jarvis_emoji2}{jarvis_mention}{jarvis_emoji1}\n\n**🕹️Files in Data Base {len(CMD_HELP)}`**\n**Commands⭆ `{len(apn)}`**\n**🎒Current page⭆ 1/{veriler[0]}** \n"
+            help_msg = f"{jarvis_emoji2}{jarvis_mention}{jarvis_emoji1}\n\n**Files in Data Base {len(CMD_HELP)} **\n**Commands⭆ `{len(apn)}`** \n**Current page⭆ 1/{veriler[0]}** \n"
             if help_pic and help_pic.endswith((".jpg", ".png")):
                 result = builder.photo(
                     help_pic,
