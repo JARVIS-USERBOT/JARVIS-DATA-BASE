@@ -213,6 +213,19 @@ ISAFK = False
 AFKREASON = None
 SUDO_LIST = {}
 
+LegendBot = TelegramClient(
+    session="Legend-Bot",
+    api_id=Config.APP_ID,
+    api_hash=Config.API_HASH,
+    connection=ConnectionTcpAbridged,
+    auto_reconnect=True,
+    connection_retries=None,
+).start(bot_token=Config.BOT_TOKEN)
+
+
+bot = kbot = Legend
+tbot = LegendBot
+
 
 from userbot.helpers import *
 from userbot.cmdhelp import CmdHelp
