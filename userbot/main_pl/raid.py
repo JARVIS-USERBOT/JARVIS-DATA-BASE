@@ -4,7 +4,7 @@ import random
 
 from telethon import events
 
-from userbot import bot, tbot
+from userbot import bot
 
 from . import *
 
@@ -331,7 +331,7 @@ RAID = [
 ABUSE = os.environ.get("ABUSE", "ON")
 
 
-@tbot.on(events.NewMessage(pattern="/raid", func=lambda e: e.sender_id == bot.uid))
+@bot.on(events.NewMessage(pattern="/raid", func=lambda e: e.sender_id == bot.uid))
 async def spam(e):
     if ABUSE == "ON":
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
@@ -369,7 +369,7 @@ async def spam(e):
         await e.reply(usage, parse_mode=None, link_preview=None)
 
 
-@tbot.on(events.NewMessage(incoming=True))
+@bot.on(events.NewMessage(incoming=True))
 async def _(event):
     global que
     queue = que.get(event.sender_id)
@@ -385,7 +385,7 @@ async def _(event):
         )
 
 
-@tbot.on(events.NewMessage(pattern="/replyraid", func=lambda x: x.sender_id == bot.uid))
+@bot.on(events.NewMessage(pattern="/replyraid", func=lambda x: x.sender_id == bot.uid))
 async def _(e):
     global que
     if ABUSE == "ON":
@@ -417,7 +417,7 @@ async def _(e):
             await e.reply(usage, parse_mode=None, link_preview=None)
 
 
-@tbot.on(
+@bot.on(
     events.NewMessage(pattern="/dreplyraid", func=lambda x: x.sender_id == bot.uid)
 )
 async def _(e):
