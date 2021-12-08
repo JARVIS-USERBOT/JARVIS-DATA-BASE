@@ -28,7 +28,7 @@ async def _(event):
     if event.fwd_from:
         return
     animation_interval = 1
-    animation_ttl = range(0, 14)
+    animation_ttl = range(0, 20)
     event = await edit_or_reply(event, "**ATTACK**")
     animation_chars = [
     "Attack In Progress",
