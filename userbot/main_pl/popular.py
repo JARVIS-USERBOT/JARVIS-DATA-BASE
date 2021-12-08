@@ -61,5 +61,5 @@ async def _(event):
 CmdHelp("Popular").add_command(
   "lol", None,"Lol Animation"
 ).add_command(
-  "lol", None,"Lol Animation"
+  "attack", None,"Attack Animation"
 ).add
