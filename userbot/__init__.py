@@ -2,6 +2,7 @@
 import os
 import sys
 import time
+from telethon.network.connection.tcpabridged import ConnectionTcpAbridged
 from telethon.sessions import StringSession
 from telethon import TelegramClient
 from userbot.Config import Config
