@@ -18,7 +18,7 @@ from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantCreator
 
 from var import Var
 
-from userbot import CMD_LIST, LOAD_PLUG, LOGS, SUDO_LIST, bot,JarvisBot
+from userbot import CMD_LIST, LOAD_PLUG, LOGS, SUDO_LIST, bot
 from userbot.helpers.exceptions import CancelProcess
 from userbot.Config import Config
 from userbot import bot
