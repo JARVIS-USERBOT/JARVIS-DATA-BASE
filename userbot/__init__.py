@@ -215,9 +215,9 @@ AFKREASON = None
 SUDO_LIST = {}
 
 JarvisBot = TelegramClient(
-    session="Legend-Bot",
-    api_id=Var.API_ID,
-    api_hash=Var.API_HASH,
+    session="Jarvis-Bot-OP",
+    api_id=Config.API_ID,
+    api_hash=Config.API_HASH,
     connection=ConnectionTcpAbridged,
     auto_reconnect=True,
     connection_retries=None,
