@@ -115,7 +115,7 @@ async def jarvis_is_on():
             await bot.send_file(
                 Config.LOGGER_ID,
                 JARVIS_PIC,
-                caption=f"DEPLOYED JARVIS BOT",
+                caption=f"Congo \nYou Have Deployed Jarvi-Userbot \nDo .data to see commands and plugin lit \nJoin @Jarvis_Support_Official for updates \n#JARVIS_OP",
             )
     except Exception as e:
         print(str(e))
