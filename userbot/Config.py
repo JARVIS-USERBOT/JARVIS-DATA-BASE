@@ -173,6 +173,8 @@ if ENV:
         FORCE_SUB = os.environ.get("FORCE_SUB", None)
         FORCE_CHANNEL_UN = os.environ.get("FORCE_CHANNEL_UN", None)
         LOGGER_ID = os.environ.get("LOGGER_ID", None)
+        APP_ID = os.environ.get("APP_ID", None)
+        API_HASH = os.environ.get("API_HASH", None)
         if LOGGER_ID:
             LOGGER_ID = int(LOGGER_ID)
         FORCE_CHANNEL_ID = int(os.environ.get("FORCE_CHANNEL_ID", False))
