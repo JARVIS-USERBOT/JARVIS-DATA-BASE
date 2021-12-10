@@ -68,14 +68,18 @@ async def amireallyalive(event):
     if  JARVIS_IMG:
         
         JARVIS_caption = f"""
-        {CUSTOM_ALIVE_TEXT}
-        --------BOT STATUS--------
-       JARVIS-BOT : {JARVISversion}
-       TLETHON    : {version.__version__}
-       UP-TIME    : {uptime}
-       OWNER      : {mention}
-       [JOIN GROUP](buttonurl://https://t.me/JarvisUserBot_Support)
-       """
+**
+{CUSTOM_ALIVE_TEXT}
+
+┏━━━━━━✦❘༻༺❘✦━━━━━━┓
+┃ JARVIS VERSION   : {JARVISversion}
+┃ UP TIME          : {uptime}
+┃ OWNER            : {mention}
+┃ TELETHON VERSION : {version.__version__}
+┗━━━━━━✦❘༻༺❘✦━━━━━━┛
+    ↠━━━━━ღ◆ღ━━━━━↞
+**
+"""
         
         
         await event.client.send_file(
@@ -112,8 +116,8 @@ async def jarvis_a(event):
     await event.edit_or_reply("Try .up")
     
 
-CmdHelp("alive").add_command(
-    'alive', None, 'υѕє αи∂ ѕєє'
+CmdHelp("up").add_command(
+    'up', None, 'υѕє αи∂ ѕєє'
 ).add_type(
     "Official"
 ).add()
