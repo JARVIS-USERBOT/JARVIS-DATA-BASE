@@ -81,24 +81,12 @@ async def amireallyalive(event):
 **
 """
         
-        
-        await event.client.send_file(
-            id, JARVIS_IMG, caption=JARVIS_caption
-        )
-        await event.delete()
-    else:
-        await edit_or_reply(
-            alive,
-            f"{CUSTOM_ALIVE_TEXT}**\n\n"
-            f"~~~~~~~~~~~~~~~~~~~~~~~ \n"
-            f"         𝕭𝖔𝖙 𝕾𝖙𝖆𝖙𝖚𝖘\n"
-            f"•⚡️• 𝕿єℓєτнοи    : `{version.__version__}`\n"
-            f"🇮🇳 JARVIS  : `{JARVISversion}`\n"
-            f"🇮🇳 υρτιмє        : `{uptime}`\n"
-            f"🔱 ɱαรƭεɾ        : {mention}\n"
-        )
-
-
+        try:
+            await event.client.send_file(id, JARVIS_IMG, caption=JARVIS_caption)
+            await event.delete()
+        except telethon.errors.rpcerrorlist.ChatSendMediaForbiddenError:
+            await event.send_message(id,f"{JARVIS_caption}")
+            
 msg = f"""
   ⚜️ Jarivs ιѕ σиℓιиє ⚜️
 {Config.ALIVE_MSG}
