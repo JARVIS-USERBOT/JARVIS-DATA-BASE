@@ -101,11 +101,7 @@ async def assistant():
         print("Addons Not Loading")
 """
 bot.loop.run_until_complete(main_pl())
-print(f"""
- ____________________
-|                    |
-|JARVIS-BOT TURNED ON|
-|____________________|""")
+print("DEPLOYED JARVIS-BOT")
 
 
 
@@ -115,7 +111,7 @@ async def jarvis_is_on():
             await bot.send_file(
                 Config.LOGGER_ID,
                 JARVIS_PIC,
-                caption=f"Congo \nYou Have Deployed Jarvi-Userbot \nDo .data to see commands and plugin lit \nJoin @Jarvis_Support_Official for updates \n#JARVIS_OP",
+                caption=f"**Congo \nYou Have Deployed Jarvi-Userbot \nDo .data to see commands and plugin lit \nJoin @Jarvis_Support_Official for updates \n#JARVIS_OP**",
             )
     except Exception as e:
         print(str(e))
