@@ -92,6 +92,7 @@ botname = Config.BOT_USERNAME
 @bot.on(admin_cmd(pattern="alive$"))
 @bot.on(admin_cmd(pattern="alive$", allow_sudo=True))
 async def jarvis_a(event):
+    id = event.chat_id
     await event.send_message(id,f"Mr.{mention} Try .up")
     
 
