@@ -1,6 +1,7 @@
 import time
 import random
 import time
+from telethon.errors import rpcerrorlist.ChatSendMediaForbiddenError as media_error
 from telethon.errors import ChatSendInlineForbiddenError as noin
 from telethon.errors.rpcerrorlist import BotMethodInvalidError as dedbot
 from userbot.Config import Config
@@ -84,24 +85,14 @@ async def amireallyalive(event):
         try:
             await event.client.send_file(id, JARVIS_IMG, caption=JARVIS_caption)
             await event.delete()
-        except telethon.errors.rpcerrorlist.ChatSendMediaForbiddenError:
+        except media_error:
             await event.send_message(id,f"{JARVIS_caption}")
-            
-msg = f"""
-  ⚜️ Jarivs ιѕ σиℓιиє ⚜️
-{Config.ALIVE_MSG}
-    ♥️ ẞø✞ ẞ✞α✞µѕ ♥️
-**•⚜️•Øաղ̃ҽ̈r     : {mention}
-•🌹•𝖑𝖊ɠêɳ̃dẞø✞ : {JARVISversion}
-•🌹•✞ҽ̀lҽ́ƭhøղ  : {version.__version__}
-•🌹•Bøt.      : {Config.BOY_OR_GIRL}
-"""
 botname = Config.BOT_USERNAME
 
 @bot.on(admin_cmd(pattern="alive$"))
 @bot.on(admin_cmd(pattern="alive$", allow_sudo=True))
 async def jarvis_a(event):
-    await event.edit_or_reply("Try .up")
+    await event.send_message(id,f"Mr.{mention} Try .up")
     
 
 CmdHelp("up").add_command(
