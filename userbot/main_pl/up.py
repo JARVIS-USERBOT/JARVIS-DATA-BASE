@@ -72,12 +72,12 @@ async def amireallyalive(event):
 {CUSTOM_ALIVE_TEXT}
 
 ┏━━━━━━✦❘༻༺❘✦━━━━━━┓
-┃ JARVIS VERSION   : {JARVISversion}
-┃ UP TIME          : {uptime}
-┃ OWNER            : {mention}
+┃ JARVIS VERSION : {JARVISversion}
+┃ UP TIME : {uptime}
+┃ OWNER : {mention}
 ┃ TELETHON VERSION : {version.__version__}
 ┗━━━━━━✦❘༻༺❘✦━━━━━━┛
-    ↠━━━━━ღ◆ღ━━━━━↞
+      ↠━━━━━ღ◆ღ━━━━━↞
 **
 """
         
