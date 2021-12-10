@@ -1,7 +1,7 @@
 import time
 import random
 import time
-from telethon.errors.rpcerrorlist. import ChatSendMediaForbiddenError as media_error
+from telethon.errors.rpcerrorlist import ChatSendMediaForbiddenError as media_error
 from telethon.errors import ChatSendInlineForbiddenError as noin
 from telethon.errors.rpcerrorlist import BotMethodInvalidError as dedbot
 from userbot.Config import Config
