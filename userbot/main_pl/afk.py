@@ -3,7 +3,7 @@
 import asyncio
 import datetime
 from datetime import datetime
-
+import Config as c
 from telethon import events
 from telethon.tl import functions, types
 from userbot import CMD_HELP
@@ -50,7 +50,7 @@ async def set_not_afk(event):
         )
         try:
             await borg.send_message(  # pylint:disable=E0602
-                Config.PLUGIN_CHANNEL,  # pylint:disable=E0602
+                c.LOGGER_ID,  # pylint:disable=E0602
                 "#AFKFALSE \nSet AFK mode to False\nReply to pic and use .afk reason"
                 + f"[{DEFAULTUSER}](tg://user?id={JARVIS}) is back | AFK TIME:"
                 + total_afk_time
@@ -145,7 +145,7 @@ async def _(event):
         await event.delete()
         try:
             await borg.send_message(  # pylint:disable=E0602
-                Config.PLUGIN_CHANNEL,  # pylint:disable=E0602
+                c.LOGGER_ID,  # pylint:disable=E0602
                 f"#AFKTRUE \nSet AFK mode to True, and Reason is {reason}",file=JARVISpic
             )
         except Exception as e:  # pylint:disable=C0103,W0703
