@@ -63,9 +63,6 @@ async def _(event):
                 except YouBlockedUserError:
                     return await python.edit("Unblock @Botfather first.")
                 await python.edit(f"**Turned On Inline Mode Successfully.** \n\nDo `{l1}op` again to get the help menu.")
-            await bot.delete_messages(
-                conv.chat_id, [first.id, second.id, third.id, fourth.id, fifth.id, sixth.id]
-            )
     else:
         await eor(event, "**⚠️ 𝙴𝚁𝚁𝙾𝚁 !!** \n𝙿𝚕𝚎𝚊𝚜𝚎 𝚁𝚎-𝙲𝚑𝚎𝚌𝚔 BOT_TOKEN & BOT_USERNAME on Heroku.")
 @bot.on(admin_cmd(pattern="help ?(.*)", outgoing=True))
@@ -95,7 +92,7 @@ async def _(event):
                     await bot.send_read_acknowledge(conv.chat_id)
                 except YouBlockedUserError:
                     return await python.edit("Unblock @Botfather first.")
-                await python.edit(f"**Turned On Inline Mode Successfully.** \n\nDo `{l1}data`  or `{11}help`again to get the help menu.")
+                await python.edit(f"**Turned On Inline Mode Successfully.** \n\nDo `{l1}data`  or `{l1}help`again to get the help menu.")
             await bot.delete_messages(
                 conv.chat_id, [first.id, second.id, third.id, fourth.id, fifth.id, sixth.id]
             )
