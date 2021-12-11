@@ -3,7 +3,7 @@
 import asyncio
 import datetime
 from datetime import datetime
-import Config as c
+import userbot.Config as c
 from telethon import events
 from telethon.tl import functions, types
 from userbot import CMD_HELP
