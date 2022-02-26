@@ -4,7 +4,7 @@ from telethon.errors.rpcerrorlist import BotInlineDisabledError as noinline
 from telethon.errors.rpcerrorlist import BotMethodInvalidError as dedbot
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
-from useebot.utils import admin_cmd, sudo_cmd
+from userbot.utils import admin_cmd, sudo_cmd
 from userbot import CMD_LIST, bot
 from userbot.Config import Config
 
