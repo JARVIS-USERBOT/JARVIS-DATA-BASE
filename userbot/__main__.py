@@ -23,6 +23,7 @@ async def add_bot(bot_token):
         await bot.start(bot_token)
         bot.me = await bot.get_me()
         bot.uid = telethon.utils.get_peer_id(bot.me)
+        print("Bot is connected")
     except Exception as e:
         print(f"JARVIS_STRING - {str(e)}")
         sys.exit()
