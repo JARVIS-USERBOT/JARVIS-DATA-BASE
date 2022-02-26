@@ -33,6 +33,10 @@ BTN_URL_REGEX = re.compile(r"(\[([^\[]+?)\]\<buttonurl:(?:/{0,2})(.+?)(:same)?\>
 CATLOGO = "https://telegra.ph/file/493268c1f5ebedc967eba.jpg"
 tr = Config.COMMAND_HAND_LER
 
+DEFAULTUSER = ALIVE_NAME or "Tony Stark"
+jarvis = bot.uid
+mention = f"[{DEFAULTUSER}](tg://user?id={jarvis})"
+
 
 def getkey(val):
     for key, value in GRP_INFO.items():
